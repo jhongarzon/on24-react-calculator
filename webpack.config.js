@@ -3,24 +3,13 @@ const webpack = require("webpack");
 
 module.exports = {
   mode: "development",
-  entry: "./src/entry.tsx",
+  entry: "./src/main.tsx",
   output: {
     path: path.resolve(__dirname, "output/"),
-    // publicPath: "/output/",
     filename: "main.js",
   },
   module: {
     rules: [
-      //   {
-      //     test: /\.css$/,
-      //     use: ["style-loader", "postcss-loader"],
-      //   },
-      //   {
-      //     test: /\.(js|jsx)$/,
-      //     exclude: /(node_modules)/,
-      //     use: ["babel-loader", "astroturf/loader"],
-      //     options: { presets: ["@babel/env"] },
-      //   },
       {
         test: /\.(js|jsx|ts|tsx)$/,
         exclude: /(node_modules|bower_components)/,
@@ -29,7 +18,19 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: "style-loader",
+          },
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 1,
+            },
+          },
+          { loader: "postcss-loader", options: { sourceMap: true } },
+        ],
       },
     ],
   },
