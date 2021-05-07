@@ -1,2 +1,19 @@
-.historical-container {
+.history-header {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  color: var(--secondary);
+  font-weight: bold;
+  font-size: large;
+  padding: 0 10px 10px 0;
+}
+.history-item {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  color: var(--secondary);
+  padding: 0 5px 5px 0;
+}
+.alternate-row {
+  background-color: var(--alternate-row);
 }

@@ -1,4 +1,6 @@
 @import "color.css";
+@import "display.css";
 @import "calculator.css";
 @import "calc-button.css";
 @import "historical.css";
+@import "toogle-switch.css";

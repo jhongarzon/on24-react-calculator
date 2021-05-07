@@ -18,3 +18,10 @@
     background: var(--calcOperation);
   }
 }
+
+.two-rows {
+  grid-row: span 2;
+}
+.three-columns {
+  grid-column: span 3;
+}
