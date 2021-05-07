@@ -1,3 +1,4 @@
+import { SyntheticEvent } from "react";
 export type CalcContainerProps = {};
 
 export enum ButtonType {
@@ -7,15 +8,9 @@ export enum ButtonType {
 }
 
 export type CalcButtonProps = {
-  label?: string;
   value: string;
+  label?: string;
   type?: ButtonType;
-};
-
-export type CalculatorProps = {
-  data?: string;
-};
-
-export type DisplayProps = {
-  data?: string;
+  customClass?: string;
+  onClick: (e: SyntheticEvent) => void;
 };
