@@ -9,6 +9,7 @@
 - Layers and responsibilities clearly defined.
 - Css rules with PostCss and Css Grid for most of the layout system.
 - Git/Github integration.
+- Unit test are under development.
 
 ### How to test
 
