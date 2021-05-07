@@ -4,12 +4,17 @@ import { ButtonType, CalcButtonProps } from "../types";
 const CalcButton: FC<CalcButtonProps> = ({
   label,
   value,
-  type = ButtonType.default,
+  type,
+  onClick,
+  customClass,
 }: CalcButtonProps) => {
+  let className = "calc-button";
+  if (type) className += ` ${type}`;
+  if (customClass) className += ` ${customClass}`;
   return (
-    <div className={`calc-button ${type}`} data-value={value}>
+    <button className={className} value={value} onClick={onClick}>
       {label ? label : value}
-    </div>
+    </button>
   );
 };
 

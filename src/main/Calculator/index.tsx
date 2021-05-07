@@ -1,13 +1,15 @@
 import React, { FC } from "react";
 import Display from "./components/Display";
 import CalculatorContainer from "./containers/CalculatorContainer";
-import { CalculatorProps } from "./types";
 
-const Calculator: FC<CalculatorProps> = (props: CalculatorProps) => {
+const Calculator: FC = () => {
   return (
-    <div className="calc-container">
-      <Display></Display>
-      <CalculatorContainer></CalculatorContainer>
+    <div>
+      <div className="calc-title">Calculator</div>
+      <div className="calc-container">
+        <Display></Display>
+        <CalculatorContainer></CalculatorContainer>
+      </div>
     </div>
   );
 };
